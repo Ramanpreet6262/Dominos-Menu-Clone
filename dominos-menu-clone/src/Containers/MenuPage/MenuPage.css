@@ -1,0 +1,29 @@
+.menuPage {
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+/* .card {
+    @font-face {
+        font-family: 'Proxima-Nova';
+        src: local('Proxima-Nova'), url('./font/ProximaNova.otf') format('otf');
+    }
+} */
+
+.title-head {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.title-subhead {
+    font-size: 0.875rem;
+    color: rgba(122, 122, 122, 0.87);
+    text-align: left;
+}
+
+.title-div {
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding-bottom: 15px;
+    margin-bottom: 1.5rem
+}
