@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './MenuPage.css';
 
 import peppyPaneer from '../../static/Images/Pizzas/peppy_paneer.jpg';
+import vegMarker from '../../static/assets/veg.svg';
+
 
 class MenuPage extends Component {
   render() {
@@ -9,7 +11,7 @@ class MenuPage extends Component {
       <React.Fragment>
         <div className='menuPage flex-container'>
           <div
-            className='card'
+            className='card text-white'
             style={{
               width: '23rem',
               border: '1px solid #fff',
@@ -24,9 +26,15 @@ class MenuPage extends Component {
               className='card-img-top'
               alt='Peppy Paneer Pizza'
             />
+            <div class="card-img-overlay">
+              <img src={vegMarker} className='category-marker' alt='veg' />
+              <span className='pizza-price'>&#8377; 215</span>
+              {/* <h5 class="card-title">Card title</h5>
+              <p class="card-text">Last updated 3 mins ago</p> */}
+            </div>
             <div className='card-body'>
               <div className='title-div'>
-                <h5 className='card-title title-head'>Peppy Paneer &#8377;</h5>
+                <h5 className='card-title title-head'>Peppy Paneer</h5>
                 <p className='card-text title-subhead'>
                   Flavorful trio of juicy paneer, crisp capsicum with spicy red
                   paprika
