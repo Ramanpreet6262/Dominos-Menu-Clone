@@ -33,7 +33,11 @@ class MenuPage extends Component {
               <button
                 type='button'
                 className='btn btn-outline-success float-right'
-                style={{ fontWeight: 'bold', fontSize: '0.75rem' }}
+                style={{
+                  fontWeight: 'bold',
+                  fontSize: '0.75rem',
+                  padding: '.375rem .5rem'
+                }}
               >
                 ADD TO CART
               </button>

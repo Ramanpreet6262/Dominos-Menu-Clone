@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Customise arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="4_Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Listing" transform="translate(-331.000000, -275.000000)">
+            <g id="categoryBox" transform="translate(6.000000, 170.000000)">
+                <g id="Group-4" transform="translate(255.000000, 96.000000)">
+                    <g id="Customise-arrow" transform="translate(74.900000, 12.500000) rotate(270.000000) translate(-74.900000, -12.500000) translate(71.400000, 9.000000)">
+                        <path d="M6.93005626,2.43295399 L6.57937942,2.07218849 C6.53265199,2.02401228 6.47882455,2 6.41797079,2 C6.35726444,2 6.30346156,2.02401228 6.25673413,2.07218849 L3.50003685,4.9082406 L0.743462406,2.07226432 C0.696710409,2.02408811 0.642907531,2.00007583 0.582127477,2.00007583 C0.521322856,2.00007583 0.467519979,2.02408811 0.420792548,2.07226432 L0.0701648481,2.4330551 C0.0233391476,2.4811302 -1.77635684e-15,2.53648482 -1.77635684e-15,2.59904312 C-1.77635684e-15,2.66155087 0.0234128502,2.71690549 0.0701648481,2.76498059 L3.33870192,6.12786206 C3.38542935,6.17596245 3.4392568,6.2 3.50003685,6.2 C3.56081691,6.2 3.61454608,6.17596245 3.66124894,6.12786206 L6.93005626,2.76498059 C6.97678369,2.71688021 7,2.66152559 7,2.59904312 C7,2.53648482 6.97678369,2.4811302 6.93005626,2.43295399 Z" id="Shape" fill="#0066A7" fill-rule="nonzero"></path>
+                        <path d="M3.6,-3.69482223e-13 L3.6,5" id="Line" stroke="#0066A7" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
