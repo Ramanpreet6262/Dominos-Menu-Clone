@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>fill_favorite</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="4_Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Listing" transform="translate(-320.000000, -180.000000)" fill="#FF0000" fill-rule="nonzero">
+            <g id="categoryBox" transform="translate(6.000000, 170.000000)">
+                <g id="fill_favorite" transform="translate(314.000000, 10.000000)">
+                    <path d="M17.2289407,0 C15.1858813,0 13.2733714,0.930334117 12,2.48909601 C10.7266286,0.930281067 8.81417143,1.88470704e-16 6.77105934,1.88470704e-16 C3.0375033,0 0,3.05487199 0,6.80989507 C0,9.75023258 1.7432967,13.1512014 5.18136264,16.9183198 C7.82721758,19.8173315 10.7054769,22.0619741 11.524589,22.680906 L11.9998418,23.04 L12.4750945,22.680959 C13.2942066,22.0620272 16.1725714,19.8174376 18.8184791,16.9184259 C22.2566505,13.1513075 24,9.75028563 24,6.80989507 C24,3.05487199 20.9624967,0 17.2289407,0 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

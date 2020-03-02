@@ -40,6 +40,33 @@
 .pizza-price {
     position: absolute;
     font-size: 1.2rem;
-    top: 6.1rem;
+    font-weight: bold;
+    top: 6.3rem;
     left: 8px;
+}
+
+.customise-button {
+    color: rgba(53, 53, 53, 0.87);
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 11px;
+    position: absolute;
+    top: 6.3rem;
+    right: 8px;
+}
+
+.customise-button:hover {
+    cursor: pointer;
+}
+
+.customise-arrow {
+    width: 11px;
+    margin-top: -1.5px;
+}
+
+.fav-marker {
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }

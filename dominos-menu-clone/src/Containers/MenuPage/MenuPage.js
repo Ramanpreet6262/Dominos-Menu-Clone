@@ -3,6 +3,10 @@ import './MenuPage.css';
 
 import peppyPaneer from '../../static/Images/Pizzas/peppy_paneer.jpg';
 import vegMarker from '../../static/assets/veg.svg';
+import nonvegMarker from '../../static/assets/non_veg.svg';
+import fav from '../../static/assets/favorite.svg';
+import fillfav from '../../static/assets/fill_favorite.svg';
+import customiseArrow from '../../static/assets/customise_arrow.svg';
 
 
 class MenuPage extends Component {
@@ -29,8 +33,8 @@ class MenuPage extends Component {
             <div class="card-img-overlay">
               <img src={vegMarker} className='category-marker' alt='veg' />
               <span className='pizza-price'>&#8377; 215</span>
-              {/* <h5 class="card-title">Card title</h5>
-              <p class="card-text">Last updated 3 mins ago</p> */}
+              <button className='customise-button'>CUSTOMISE <img src={customiseArrow} className='customise-arrow' alt='arrow' /></button>
+              <img src={fav} className='fav-marker' alt='favorite' />
             </div>
             <div className='card-body'>
               <div className='title-div'>
