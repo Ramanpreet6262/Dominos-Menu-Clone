@@ -1,12 +1,21 @@
 .menuPage {
     margin-top: 120px;
     margin-left: 50px;
+    width: 70%;
+}
+
+.cart-div {
+    position: absolute;
+    left: 70%;
+    top: 120px;
+    position: fixed;
 }
 
 .title-head {
     font-size: 1rem;
     font-weight: bold;
     text-align: left;
+    color: #000;
 }
 
 .title-subhead {
@@ -69,4 +78,17 @@
     position: absolute;
     top: 8px;
     right: 8px;
+}
+
+.empty-cart-head {
+    text-transform: uppercase;
+    color: rgb(113, 128, 145);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.empty-cart-subhead {
+    font-size: 15px;
+    color: rgb(105, 129, 158);
+    margin-top: -17px;
 }
