@@ -46,7 +46,7 @@ class MenuPage extends Component {
             </div>
           </div>
 
-
+{/* 
           <div
             className='card'
             style={{
@@ -245,7 +245,7 @@ class MenuPage extends Component {
             </div>
           </div>
 
-          
+           */}
 
         </div>
       </React.Fragment>

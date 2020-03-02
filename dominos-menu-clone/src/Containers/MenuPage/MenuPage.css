@@ -3,13 +3,6 @@
     margin-left: 50px;
 }
 
-/* .card {
-    @font-face {
-        font-family: 'Proxima-Nova';
-        src: local('Proxima-Nova'), url('./font/ProximaNova.otf') format('otf');
-    }
-} */
-
 .title-head {
     font-size: 1rem;
     font-weight: bold;
@@ -31,7 +24,7 @@
 .flex-container {
     display: flex;
     flex-flow: row wrap;
-    /* justify-content: space-between; */
-    /* align-items: flex-start; */
+    justify-content: flex-start;
+    align-items: flex-start;
     align-content: space-between;
 }

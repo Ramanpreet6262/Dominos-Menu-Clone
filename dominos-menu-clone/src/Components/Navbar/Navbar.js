@@ -1,29 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../../static/Logo/dominos.png';
+import logo from '../../static/assets/logo_white.svg';
 
 const Navbar = () => {
   return (
     <div>
       <nav
         className='navbar navbar-expand-md navbar-light fixed-top'
-        style={{ backgroundColor: '#0066A7' }}
+        style={{ backgroundColor: '#0066A7', height: '50px' }}
       >
         <div className='container' style={{ marginLeft: '42px' }}>
           <Link
             className='navbar-brand'
             to='/'
-            style={{ color: 'white', fontWeight: 'bold' }}
           >
-            <img
-              src={logo}
-              width='60'
-              height='32'
-              className='d-inline-block align-top'
-              alt=''
-            />
-            <span style={{ marginLeft: '-12px' }}>Domino's Pizza</span>
+            <img src={logo} alt='' />
           </Link>
         </div>
       </nav>
