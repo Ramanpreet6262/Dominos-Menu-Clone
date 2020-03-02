@@ -59,3 +59,5 @@ let pizzas = [{
     title: 'Chicken Pepperoni'
 }
 ];
+
+export default pizzas;
