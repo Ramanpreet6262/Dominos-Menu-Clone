@@ -1,94 +1,95 @@
 .menuPage {
-    margin-top: 120px;
-    margin-left: 50px;
-    width: 70%;
+  margin-top: 120px;
+  margin-left: 50px;
+  width: 70%;
 }
 
 .cart-div {
-    position: absolute;
-    left: 70%;
-    top: 120px;
-    position: fixed;
+  position: absolute;
+  left: 70%;
+  top: 120px;
+  position: fixed;
 }
 
 .title-head {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: left;
-    color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  color: #000;
 }
 
 .title-subhead {
-    font-size: 0.875rem;
-    color: rgba(122, 122, 122, 0.87);
-    text-align: left;
+  font-size: 0.875rem;
+  color: rgba(122, 122, 122, 0.87);
+  text-align: left;
 }
 
 .title-div {
-    border-bottom: 1px solid rgb(233, 233, 233);
-    padding-bottom: 15px;
-    margin-bottom: 1.5rem
+  border-bottom: 1px solid rgb(233, 233, 233);
+  padding-bottom: 15px;
+  margin-bottom: 1.5rem;
+  height: 100px;
 }
 
 .flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: space-between;
 }
 
 .category-marker {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 15px;
-    height: 15px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 15px;
+  height: 15px;
 }
 
 .pizza-price {
-    position: absolute;
-    font-size: 1.2rem;
-    font-weight: bold;
-    top: 6.3rem;
-    left: 8px;
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: bold;
+  top: 6.3rem;
+  left: 8px;
 }
 
 .customise-button {
-    color: rgba(53, 53, 53, 0.87);
-    background-color: #fff;
-    border: 1px solid #fff;
-    border-radius: 3px;
-    font-size: 11px;
-    position: absolute;
-    top: 6.3rem;
-    right: 8px;
+  color: rgba(53, 53, 53, 0.87);
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  font-size: 11px;
+  position: absolute;
+  top: 6.3rem;
+  right: 8px;
 }
 
 .customise-button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .customise-arrow {
-    width: 11px;
-    margin-top: -1.5px;
+  width: 11px;
+  margin-top: -1.5px;
 }
 
 .fav-marker {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .empty-cart-head {
-    text-transform: uppercase;
-    color: rgb(113, 128, 145);
-    font-size: 25px;
-    font-weight: 900;
+  text-transform: uppercase;
+  color: rgb(113, 128, 145);
+  font-size: 25px;
+  font-weight: 900;
 }
 
 .empty-cart-subhead {
-    font-size: 15px;
-    color: rgb(105, 129, 158);
-    margin-top: -17px;
+  font-size: 15px;
+  color: rgb(105, 129, 158);
+  margin-top: -17px;
 }
