@@ -147,7 +147,9 @@ class MenuPage extends Component {
                 className='card'
                 style={{
                   width: '21rem',
-                  border: '1px solid #fff',
+                  borderWidth: '1px',
+                  borderStyle: 'solid',
+                  borderColor: '#fff',
                   boxShadow:
                     'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
                 }}
@@ -178,13 +180,14 @@ class MenuPage extends Component {
             ) : (
               <React.Fragment>
                 <div
-                  className='card'
+                  className='card cart-menu'
                   style={{
                     width: '21rem',
                     height: '350px',
                     overflowY: 'scroll',
-                    border: '1px solid #fff',
-                    borderTop: '3px solid #82BB37',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderColor: '#fff',
                     borderRadius: '0px',
                     boxShadow:
                       'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
@@ -235,7 +238,9 @@ class MenuPage extends Component {
                   style={{
                     width: '21rem',
                     height: '95px',
-                    border: '1px solid rgb(239, 245, 251)',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderColor: 'rgb(239, 245, 251)',
                     borderRadius: '0px',
                     boxShadow:
                       'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px -0.56rem 0.62rem 0px',
@@ -276,7 +281,7 @@ export default MenuPage;
 crust: 'New Hand Tossed',
 size: 'Regular'
 
-Then Add to Cart de click te add to cart and cart da sarra logic also logic of counter of quantities and price
+Remove inline styling all
     
 Then customise de click te side modal and update value
 */

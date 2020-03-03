@@ -5,7 +5,6 @@
 }
 
 .cart-div {
-  position: absolute;
   left: 70%;
   top: 120px;
   position: fixed;
@@ -180,4 +179,8 @@
   float: right;
   color: rgb(44, 101, 128);
   margin-right: 2px;
+}
+
+.card.cart-menu {
+  border-top: 3px solid #82bb37 !important;
 }
