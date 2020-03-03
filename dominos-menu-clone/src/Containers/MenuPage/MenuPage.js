@@ -67,24 +67,13 @@ class MenuPage extends Component {
           <div className='menuPage flex-container'>
             {this.state.data.map((pizza, index) => {
               return (
-                <div
-                  className='card text-white'
-                  style={{
-                    width: '23rem',
-                    border: '1px solid #fff',
-                    boxShadow:
-                      'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px',
-                    marginBottom: '40px',
-                    marginRight: '30px'
-                  }}
-                  key={index}
-                >
+                <div className='card text-white pizza-card' key={index}>
                   <img
                     src={peppyPaneer}
                     className='card-img-top'
                     alt='Peppy Paneer Pizza'
                   />
-                  <div className='card-img-overlay' style={{ height: '142px' }}>
+                  <div className='card-img-overlay img-overlay'>
                     <img
                       src={pizza.category === 'veg' ? vegMarker : nonvegMarker}
                       className='category-marker'
@@ -124,12 +113,7 @@ class MenuPage extends Component {
                     ) : (
                       <button
                         type='button'
-                        className='btn btn-outline-success float-right'
-                        style={{
-                          fontWeight: 'bold',
-                          fontSize: '0.75rem',
-                          padding: '.375rem .5rem'
-                        }}
+                        className='btn btn-outline-success float-right add-to-cart'
                         onClick={() => this.addToCartHandler(pizza.id)}
                       >
                         ADD TO CART
@@ -143,34 +127,15 @@ class MenuPage extends Component {
 
           <div className='cart-div'>
             {this.state.cart.length === 0 ? (
-              <div
-                className='card'
-                style={{
-                  width: '21rem',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
-                  borderColor: '#fff',
-                  boxShadow:
-                    'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
-                }}
-              >
+              <div className='card empty-cart-div'>
                 <div>
                   <img
                     src={emptyCart}
-                    className='card-img-right'
+                    className='card-img-right empty-cart-img'
                     alt='EMPTY CART'
-                    style={{
-                      width: '175px',
-                      position: 'absolute',
-                      top: '0px',
-                      right: '0px'
-                    }}
                   />
                 </div>
-                <div
-                  className='card-body'
-                  style={{ height: '150px', marginTop: '270px' }}
-                >
+                <div className='card-body empty-cart-body'>
                   <p className='empty-cart-head'>YOUR CART IS EMPTY</p>
                   <p className='empty-cart-subhead'>
                     Please add some items from the menu.
@@ -179,20 +144,7 @@ class MenuPage extends Component {
               </div>
             ) : (
               <React.Fragment>
-                <div
-                  className='card cart-menu'
-                  style={{
-                    width: '21rem',
-                    height: '350px',
-                    overflowY: 'scroll',
-                    borderWidth: '1px',
-                    borderStyle: 'solid',
-                    borderColor: '#fff',
-                    borderRadius: '0px',
-                    boxShadow:
-                      'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
-                  }}
-                >
+                <div className='card cart-menu'>
                   <div className='cart-items'>
                     {this.state.cart.map((pizzaId, index) => (
                       <div className='cart-item' key={index}>
@@ -233,20 +185,7 @@ class MenuPage extends Component {
                     ))}
                   </div>
                 </div>
-                <div
-                  className='card'
-                  style={{
-                    width: '21rem',
-                    height: '95px',
-                    borderWidth: '1px',
-                    borderStyle: 'solid',
-                    borderColor: 'rgb(239, 245, 251)',
-                    borderRadius: '0px',
-                    boxShadow:
-                      'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px -0.56rem 0.62rem 0px',
-                    backgroundColor: 'rgb(239, 245, 251)'
-                  }}
-                >
+                <div className='card cart-footer'>
                   <div className='subtotal-div'>
                     <span className='subtotal-head'>Subtotal</span>
                     <span className='subtotal-price'>

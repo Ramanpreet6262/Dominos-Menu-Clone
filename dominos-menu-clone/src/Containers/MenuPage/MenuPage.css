@@ -182,5 +182,61 @@
 }
 
 .card.cart-menu {
+  width: 21rem;
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid #fff;
   border-top: 3px solid #82bb37 !important;
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 2px 4px 0px;
+}
+
+.card.pizza-card {
+  width: 23rem;
+  border: 1px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 2px 4px 0px;
+  margin-bottom: 40px;
+  margin-right: 30px;
+}
+
+.card-img-overlay.img-overlay {
+  height: 142px;
+}
+
+.btn.add-to-cart {
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0.375rem 0.5rem;
+}
+
+.card.empty-cart-div {
+  width: 21rem;
+  border: 1px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 2px 4px 0px;
+}
+
+.card-img-right.empty-cart-img {
+  width: 175px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.card-body.empty-cart-body {
+  height: 150px;
+  margin-top: 270px;
+}
+
+.card.cart-footer {
+  width: 21rem;
+  height: 95px;
+  border: 1px solid rgb(239, 245, 251);
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 2px 4px 0px,
+    rgba(0, 0, 0, 0.12) 0px -0.56rem 0.62rem 0px;
+  background-color: rgb(239, 245, 251);
 }
