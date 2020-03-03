@@ -219,8 +219,6 @@ export default MenuPage;
 /* 
 crust: 'New Hand Tossed',
 size: 'Regular'
-
-Remove inline styling all
     
 Then customise de click te side modal and update value
 */
