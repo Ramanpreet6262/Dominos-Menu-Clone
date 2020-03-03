@@ -142,7 +142,7 @@ class MenuPage extends Component {
           </div>
 
           <div className='cart-div'>
-            {/* {this.state.cart.length === 0 ? (
+            {this.state.cart.length === 0 ? (
               <div
                 className='card'
                 style={{
@@ -175,87 +175,94 @@ class MenuPage extends Component {
                   </p>
                 </div>
               </div>
-            ) : null} */}
-            <div
-              className='card'
-              style={{
-                width: '21rem',
-                height: '350px',
-                overflowY: 'scroll',
-                border: '1px solid #fff',
-                borderTop: '3px solid #82BB37',
-                borderRadius: '0px',
-                boxShadow:
-                  'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
-              }}
-            >
-              <div className='cart-items'>
-                {this.state.cart.map((pizzaId, index) => (
-                  <div className='cart-item' key={index}>
-                    <img src={peppyPaneer} className='cart-img' alt='pizza' />
-                    <p className='cart-item-title'>
-                      {this.state.data[pizzaId].title}
-                    </p>
-                    <p className='cart-item-desc'>
-                      {this.state.data[pizzaId].description}
-                    </p>
-                    <p className='cart-item-details'>
-                      {this.state.data[pizzaId].size} |{' '}
-                      {this.state.data[pizzaId].crust}
-                    </p>
-                    <div className='cart-qty-btn'>
-                      <QuantityButton
-                        quantity={this.state.data[pizzaId].quantity}
-                        onPlusClick={() =>
-                          this.incQtyHandler(this.state.data[pizzaId].id)
-                        }
-                        onMinusClick={() =>
-                          this.decQtyHandler(this.state.data[pizzaId].id)
-                        }
-                      />
-                    </div>
-                    <div className='cart-item-price'>
-                      <span>
-                        &#8377;{' '}
-                        {this.state.data[pizzaId].price *
-                          this.state.data[pizzaId].quantity}
-                      </span>
-                    </div>
+            ) : (
+              <React.Fragment>
+                <div
+                  className='card'
+                  style={{
+                    width: '21rem',
+                    height: '350px',
+                    overflowY: 'scroll',
+                    border: '1px solid #fff',
+                    borderTop: '3px solid #82BB37',
+                    borderRadius: '0px',
+                    boxShadow:
+                      'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
+                  }}
+                >
+                  <div className='cart-items'>
+                    {this.state.cart.map((pizzaId, index) => (
+                      <div className='cart-item' key={index}>
+                        <img
+                          src={peppyPaneer}
+                          className='cart-img'
+                          alt='pizza'
+                        />
+                        <p className='cart-item-title'>
+                          {this.state.data[pizzaId].title}
+                        </p>
+                        <p className='cart-item-desc'>
+                          {this.state.data[pizzaId].description}
+                        </p>
+                        <p className='cart-item-details'>
+                          {this.state.data[pizzaId].size} |{' '}
+                          {this.state.data[pizzaId].crust}
+                        </p>
+                        <div className='cart-qty-btn'>
+                          <QuantityButton
+                            quantity={this.state.data[pizzaId].quantity}
+                            onPlusClick={() =>
+                              this.incQtyHandler(this.state.data[pizzaId].id)
+                            }
+                            onMinusClick={() =>
+                              this.decQtyHandler(this.state.data[pizzaId].id)
+                            }
+                          />
+                        </div>
+                        <div className='cart-item-price'>
+                          <span>
+                            &#8377;{' '}
+                            {this.state.data[pizzaId].price *
+                              this.state.data[pizzaId].quantity}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-            <div
-              className='card'
-              style={{
-                width: '21rem',
-                height: '95px',
-                border: '1px solid rgb(239, 245, 251)',
-                borderRadius: '0px',
-                boxShadow:
-                  'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px -0.56rem 0.62rem 0px',
-                backgroundColor: 'rgb(239, 245, 251)'
-              }}
-            >
-              <div className='subtotal-div'>
-                <span className='subtotal-head'>Subtotal</span>
-                <span className='subtotal-price'>
-                  &#8377;{' '}
-                  {this.state.cart.reduce(
-                    (totalPrice, pizzaId) =>
-                      totalPrice +
-                      this.state.data[pizzaId].price *
-                        this.state.data[pizzaId].quantity,
-                    0
-                  )}
-                </span>
-              </div>
-              <div>
-                <button className='checkout-btn'>
-                  <span className='checkout-text'>CHECKOUT</span>
-                </button>
-              </div>
-            </div>
+                </div>
+                <div
+                  className='card'
+                  style={{
+                    width: '21rem',
+                    height: '95px',
+                    border: '1px solid rgb(239, 245, 251)',
+                    borderRadius: '0px',
+                    boxShadow:
+                      'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px -0.56rem 0.62rem 0px',
+                    backgroundColor: 'rgb(239, 245, 251)'
+                  }}
+                >
+                  <div className='subtotal-div'>
+                    <span className='subtotal-head'>Subtotal</span>
+                    <span className='subtotal-price'>
+                      &#8377;{' '}
+                      {this.state.cart.reduce(
+                        (totalPrice, pizzaId) =>
+                          totalPrice +
+                          this.state.data[pizzaId].price *
+                            this.state.data[pizzaId].quantity,
+                        0
+                      )}
+                    </span>
+                  </div>
+                  <div>
+                    <button className='checkout-btn'>
+                      <span className='checkout-text'>CHECKOUT</span>
+                    </button>
+                  </div>
+                </div>
+              </React.Fragment>
+            )}
           </div>
         </React.Fragment>
       );
