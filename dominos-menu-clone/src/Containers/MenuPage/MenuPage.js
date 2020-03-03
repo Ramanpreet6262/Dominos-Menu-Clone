@@ -22,6 +22,19 @@ class MenuPage extends Component {
     // console.log(this.state.data);
   }
 
+  favHandler = id => {
+    // console.log(id);
+    const newState = [...this.state.data];
+    newState[id].favorite === 'true'
+      ? (newState[id].favorite = 'false')
+      : (newState[id].favorite = 'true');
+    this.setState({ data: newState });
+  };
+
+  addToCartHandler = id => {
+    console.log(id);
+  };
+
   render() {
     // console.log(this.state.data);
     if (this.state.data.length === 0) {
@@ -64,7 +77,12 @@ class MenuPage extends Component {
                         alt='arrow'
                       />
                     </button>
-                    <img src={fav} className='fav-marker' alt='favorite' />
+                    <img
+                      src={pizza.favorite === 'true' ? fillfav : fav}
+                      className='fav-marker'
+                      alt='favorite'
+                      onClick={() => this.favHandler(pizza.id)}
+                    />
                   </div>
                   <div className='card-body'>
                     <div className='title-div'>
@@ -81,6 +99,7 @@ class MenuPage extends Component {
                         fontSize: '0.75rem',
                         padding: '.375rem .5rem'
                       }}
+                      onClick={() => this.addToCartHandler(pizza.id)}
                     >
                       ADD TO CART
                     </button>
@@ -131,3 +150,12 @@ class MenuPage extends Component {
 }
 
 export default MenuPage;
+
+/* 
+crust: 'New Hand Tossed',
+size: 'Regular'
+
+Then Add to Cart de click te add to cart and cart da sarra logic also logic of counter of quantities and price
+    
+Then customise de click te side modal and update value
+*/
