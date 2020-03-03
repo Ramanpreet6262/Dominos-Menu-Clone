@@ -15,16 +15,15 @@ import emptyCart from '../../static/assets/empty_cart.png';
 
 class MenuPage extends Component {
   state = {
-    data: []
+    data: [],
+    cart: []
   };
 
   componentDidMount() {
     this.setState({ data: pizzas });
-    // console.log(this.state.data);
   }
 
   favHandler = id => {
-    // console.log(id);
     const newState = [...this.state.data];
     newState[id].favorite === 'true'
       ? (newState[id].favorite = 'false')
@@ -35,7 +34,11 @@ class MenuPage extends Component {
   addToCartHandler = id => {
     const updatedState = [...this.state.data];
     updatedState[id].quantity += 1;
-    this.setState({ data: updatedState });
+    let newCart = [...this.state.cart];
+    if (!this.state.cart.includes(id)) {
+      newCart.unshift(id);
+    }
+    this.setState({ data: updatedState, cart: newCart });
   };
 
   incQtyHandler = id => {
@@ -46,12 +49,17 @@ class MenuPage extends Component {
 
   decQtyHandler = id => {
     const updatedState = [...this.state.data];
+    let newCart = [...this.state.cart];
+    if (updatedState[id].quantity === 1) {
+      const index = newCart.indexOf(id);
+      newCart.splice(index, 1);
+    }
     updatedState[id].quantity -= 1;
-    this.setState({ data: updatedState });
+    this.setState({ data: updatedState, cart: newCart });
   };
 
   render() {
-    // console.log(this.state.data);
+    console.log(this.state.cart);
     if (this.state.data.length === 0) {
       return <Loader />;
     } else {
@@ -133,38 +141,52 @@ class MenuPage extends Component {
           </div>
 
           <div className='cart-div'>
+            {/* {this.state.cart.length === 0 ? (
+              <div
+                className='card'
+                style={{
+                  width: '21rem',
+                  border: '1px solid #fff',
+                  boxShadow:
+                    'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
+                }}
+              >
+                <div>
+                  <img
+                    src={emptyCart}
+                    className='card-img-right'
+                    alt='EMPTY CART'
+                    style={{
+                      width: '175px',
+                      position: 'absolute',
+                      top: '0px',
+                      right: '0px'
+                    }}
+                  />
+                </div>
+                <div
+                  className='card-body'
+                  style={{ height: '150px', marginTop: '270px' }}
+                >
+                  <p className='empty-cart-head'>YOUR CART IS EMPTY</p>
+                  <p className='empty-cart-subhead'>
+                    Please add some items from the menu.
+                  </p>
+                </div>
+              </div>
+            ) : null} */}
             <div
               className='card'
               style={{
                 width: '21rem',
+                height: '350px',
+                overflowY: 'scroll',
                 border: '1px solid #fff',
+                borderTop: '3px solid #82BB37',
                 boxShadow:
                   'rgba(0, 0, 0, 0.12) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 4px 0px'
               }}
-            >
-              <div>
-                <img
-                  src={emptyCart}
-                  className='card-img-right'
-                  alt='EMPTY CART'
-                  style={{
-                    width: '175px',
-                    position: 'absolute',
-                    top: '0px',
-                    right: '0px'
-                  }}
-                />
-              </div>
-              <div
-                className='card-body'
-                style={{ height: '150px', marginTop: '270px' }}
-              >
-                <p className='empty-cart-head'>YOUR CART IS EMPTY</p>
-                <p className='empty-cart-subhead'>
-                  Please add some items from the menu.
-                </p>
-              </div>
-            </div>
+            ></div>
           </div>
         </React.Fragment>
       );
