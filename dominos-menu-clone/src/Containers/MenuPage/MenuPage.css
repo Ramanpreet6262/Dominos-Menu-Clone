@@ -93,3 +93,91 @@
   color: rgb(105, 129, 158);
   margin-top: -17px;
 }
+
+.subtotal-div {
+  margin-top: 12px;
+}
+
+.subtotal-head {
+  float: left;
+  font-weight: bold;
+  font-size: 19px;
+  margin-left: 15px;
+}
+
+.subtotal-price {
+  float: right;
+  font-weight: bold;
+  font-size: 19px;
+  margin-right: 15px;
+}
+
+.checkout-btn {
+  width: 306px;
+  margin-top: 7px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(130, 187, 55);
+  border-radius: 3px;
+  border: 1px solid rgb(130, 187, 55);
+}
+
+.checkout-btn:hover {
+  cursor: pointer;
+}
+
+.checkout-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cart-item {
+  margin: 15px 10px 0px 10px;
+  border-bottom: 1px dashed rgb(100, 129, 143);
+  height: 150px;
+}
+
+.cart-img {
+  height: 80px;
+  width: 80px;
+  float: left;
+}
+
+.cart-item-title {
+  text-align: left;
+  margin-left: 100px;
+  color: rgb(39, 71, 87);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart-item-desc {
+  text-align: left;
+  margin-left: 100px;
+  color: rgb(100, 129, 143);
+  font-size: 12px;
+  margin-top: -10px;
+  line-height: 1.2;
+}
+
+.cart-item-details {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(100, 129, 143);
+  margin-top: -10px;
+}
+
+.card-qty-btn {
+  float: right;
+}
+
+.cart-qty-btn {
+  float: left;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  font-weight: bold;
+  float: right;
+  color: rgb(44, 101, 128);
+  margin-right: 2px;
+}
