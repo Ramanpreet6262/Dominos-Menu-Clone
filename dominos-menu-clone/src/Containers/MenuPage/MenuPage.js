@@ -33,7 +33,21 @@ class MenuPage extends Component {
   };
 
   addToCartHandler = id => {
-    console.log(id);
+    const updatedState = [...this.state.data];
+    updatedState[id].quantity += 1;
+    this.setState({ data: updatedState });
+  };
+
+  incQtyHandler = id => {
+    const updatedState = [...this.state.data];
+    updatedState[id].quantity += 1;
+    this.setState({ data: updatedState });
+  };
+
+  decQtyHandler = id => {
+    const updatedState = [...this.state.data];
+    updatedState[id].quantity -= 1;
+    this.setState({ data: updatedState });
   };
 
   render() {
@@ -93,7 +107,11 @@ class MenuPage extends Component {
                       </p>
                     </div>
                     {pizza.quantity > 0 ? (
-                      <QuantityButton quantity={pizza.quantity} />
+                      <QuantityButton
+                        quantity={pizza.quantity}
+                        onPlusClick={() => this.incQtyHandler(pizza.id)}
+                        onMinusClick={() => this.decQtyHandler(pizza.id)}
+                      />
                     ) : (
                       <button
                         type='button'
@@ -158,8 +176,7 @@ export default MenuPage;
 
 /* 
 crust: 'New Hand Tossed',
-size: 'Regular',
-quantity: 0
+size: 'Regular'
 
 Then Add to Cart de click te add to cart and cart da sarra logic also logic of counter of quantities and price
     
