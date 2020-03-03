@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './MenuPage.css';
 
 import Loader from '../../Components/Loader/Loader';
+import QuantityButton from '../QuantityButton/QuantityButton';
 import pizzas from '../../data/data';
 
 import peppyPaneer from '../../static/Images/Pizzas/peppy_paneer.jpg';
@@ -62,7 +63,7 @@ class MenuPage extends Component {
                     className='card-img-top'
                     alt='Peppy Paneer Pizza'
                   />
-                  <div className='card-img-overlay'>
+                  <div className='card-img-overlay' style={{ height: '142px' }}>
                     <img
                       src={pizza.category === 'veg' ? vegMarker : nonvegMarker}
                       className='category-marker'
@@ -91,18 +92,22 @@ class MenuPage extends Component {
                         {pizza.description}
                       </p>
                     </div>
-                    <button
-                      type='button'
-                      className='btn btn-outline-success float-right'
-                      style={{
-                        fontWeight: 'bold',
-                        fontSize: '0.75rem',
-                        padding: '.375rem .5rem'
-                      }}
-                      onClick={() => this.addToCartHandler(pizza.id)}
-                    >
-                      ADD TO CART
-                    </button>
+                    {pizza.quantity > 0 ? (
+                      <QuantityButton quantity={pizza.quantity} />
+                    ) : (
+                      <button
+                        type='button'
+                        className='btn btn-outline-success float-right'
+                        style={{
+                          fontWeight: 'bold',
+                          fontSize: '0.75rem',
+                          padding: '.375rem .5rem'
+                        }}
+                        onClick={() => this.addToCartHandler(pizza.id)}
+                      >
+                        ADD TO CART
+                      </button>
+                    )}
                   </div>
                 </div>
               );
@@ -153,7 +158,8 @@ export default MenuPage;
 
 /* 
 crust: 'New Hand Tossed',
-size: 'Regular'
+size: 'Regular',
+quantity: 0
 
 Then Add to Cart de click te add to cart and cart da sarra logic also logic of counter of quantities and price
     

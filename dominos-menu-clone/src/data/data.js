@@ -7,6 +7,7 @@ let pizzas = [
     favorite: 'false',
     id: '0',
     price: '215',
+    quantity: 0,
     size: 'Regular',
     title: 'Peppy Paneer'
   },
@@ -18,6 +19,7 @@ let pizzas = [
     favorite: 'false',
     id: '1',
     price: '450',
+    quantity: 0,
     size: 'Medium',
     title: 'Deluxe Veggie'
   },
@@ -29,6 +31,7 @@ let pizzas = [
     favorite: 'false',
     id: '2',
     price: '450',
+    quantity: 0,
     size: 'Medium',
     title: 'Veg Extravaganza'
   },
@@ -40,6 +43,7 @@ let pizzas = [
     favorite: 'false',
     id: '3',
     price: '450',
+    quantity: 0,
     size: 'Medium',
     title: 'Chicken Golden Delight'
   },
@@ -51,6 +55,7 @@ let pizzas = [
     favorite: 'false',
     id: '4',
     price: '570',
+    quantity: 0,
     size: 'Medium',
     title: 'Indi Chicken Tikka'
   },
@@ -62,6 +67,7 @@ let pizzas = [
     favorite: 'false',
     id: '5',
     price: '570',
+    quantity: 0,
     size: 'Medium',
     title: 'Chicken Pepperoni'
   }

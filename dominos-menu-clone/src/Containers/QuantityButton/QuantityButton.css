@@ -1,0 +1,37 @@
+.qty-btn {
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 3px;
+  float: right;
+  width: 90px;
+  height: 28px;
+}
+
+.qty {
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.delete-div {
+  border-right: 1px solid rgb(186, 186, 186);
+  float: left;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.delete-icon {
+  width: 12px;
+}
+
+.plus-div {
+  border-left: 1px solid rgb(186, 186, 186);
+  float: right;
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.plus-icon {
+  width: 12px;
+}
