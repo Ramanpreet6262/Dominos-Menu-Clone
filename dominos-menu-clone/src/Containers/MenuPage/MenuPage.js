@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+// import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+
 import './MenuPage.css';
 
 import Loader from '../../Components/Loader/Loader';
@@ -13,7 +19,28 @@ import fillfav from '../../static/assets/fill_favorite.svg';
 import customiseArrow from '../../static/assets/customise_arrow.svg';
 import emptyCart from '../../static/assets/empty_cart.png';
 
+// const useStyles = makeStyles(theme => ({
+//   formControl: {
+//     margin: theme.spacing(1),
+//     minWidth: 120
+//   }
+// }));
+
 class MenuPage extends Component {
+  // classes = useStyles();
+
+  // const [age, setAge] = React.useState('');
+
+  // const inputLabel = React.useRef(null);
+  // const [labelWidth, setLabelWidth] = React.useState(0);
+  // React.useEffect(() => {
+  //   setLabelWidth(inputLabel.current.offsetWidth);
+  // }, []);
+
+  // const handleChange = event => {
+  //   setAge(event.target.value);
+  // };
+
   state = {
     data: [],
     cart: []
@@ -58,6 +85,18 @@ class MenuPage extends Component {
     this.setState({ data: updatedState, cart: newCart });
   };
 
+  customiseHandler = id => {
+    console.log(id);
+  };
+
+  handleChange = (id, event) => {
+    const updatedState = [...this.state.data];
+    // console.log(updatedState[id].size);
+    updatedState[id].size = event.target.value;
+    console.log(updatedState[id].size);
+    // this.setState({value: event.target.value});
+  };
+
   render() {
     if (this.state.data.length === 0) {
       return <Loader />;
@@ -79,8 +118,14 @@ class MenuPage extends Component {
                       className='category-marker'
                       alt='veg/nonveg category'
                     />
-                    <span className='pizza-price'>&#8377; {pizza.price}</span>
-                    <button className='customise-button'>
+                    <span className='pizza-price'>
+                      &#8377;{' '}
+                      {pizza.priceData[pizza.sizeIndex][pizza.crustIndex]}
+                    </span>
+                    <button
+                      className='customise-button'
+                      onClick={() => this.customiseHandler(pizza.id)}
+                    >
                       CUSTOMISE{' '}
                       <img
                         src={customiseArrow}
@@ -101,6 +146,24 @@ class MenuPage extends Component {
                       <p className='card-text title-subhead'>
                         {pizza.description}
                       </p>
+                    </div>
+                    <div className='size-crust-select'>
+                      {/* <FormControl className={this.classes.formControl}> */}
+                      <FormControl>
+                        <InputLabel id='demo-simple-select-label'>
+                          Size
+                        </InputLabel>
+                        <Select
+                          labelId='demo-simple-select-label'
+                          id='demo-simple-select'
+                          value={pizza.size}
+                          onChange={() => this.handleChange(pizza.id)}
+                        >
+                          <MenuItem value='Regular'>Regular</MenuItem>
+                          <MenuItem value='Medium'>Medium</MenuItem>
+                          <MenuItem value='Large'>Large</MenuItem>
+                        </Select>
+                      </FormControl>
                     </div>
                     {pizza.quantity > 0 ? (
                       <div className='card-qty-btn'>
@@ -177,7 +240,9 @@ class MenuPage extends Component {
                         <div className='cart-item-price'>
                           <span>
                             &#8377;{' '}
-                            {this.state.data[pizzaId].price *
+                            {this.state.data[pizzaId].priceData[
+                              this.state.data[pizzaId].sizeIndex
+                            ][this.state.data[pizzaId].crustIndex] *
                               this.state.data[pizzaId].quantity}
                           </span>
                         </div>
@@ -193,7 +258,9 @@ class MenuPage extends Component {
                       {this.state.cart.reduce(
                         (totalPrice, pizzaId) =>
                           totalPrice +
-                          this.state.data[pizzaId].price *
+                          this.state.data[pizzaId].priceData[
+                            this.state.data[pizzaId].sizeIndex
+                          ][this.state.data[pizzaId].crustIndex] *
                             this.state.data[pizzaId].quantity,
                         0
                       )}
