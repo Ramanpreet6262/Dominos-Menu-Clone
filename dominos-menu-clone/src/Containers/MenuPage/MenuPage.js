@@ -9,7 +9,7 @@ import './MenuPage.css';
 
 import Loader from '../../Components/Loader/Loader';
 import QuantityButton from '../QuantityButton/QuantityButton';
-import pizzas from '../../data/data';
+import data from '../../data/data';
 
 import peppyPaneer from '../../static/Images/Pizzas/peppy_paneer.jpg';
 import vegMarker from '../../static/assets/veg.svg';
@@ -43,19 +43,25 @@ class MenuPage extends Component {
 
   state = {
     data: [],
-    cart: []
+    cart: [],
+    allSizes: [],
+    allCrusts: []
   };
 
   componentDidMount() {
-    this.setState({ data: pizzas });
+    this.setState({
+      data: data.pizzas,
+      allSizes: data.allSizes,
+      allCrusts: data.allCrusts
+    });
   }
 
   favHandler = id => {
-    const newState = [...this.state.data];
-    newState[id].favorite === 'true'
-      ? (newState[id].favorite = 'false')
-      : (newState[id].favorite = 'true');
-    this.setState({ data: newState });
+    let { data } = this.state;
+    data[id].favorite === 'true'
+      ? (data[id].favorite = 'false')
+      : (data[id].favorite = 'true');
+    this.setState({ data });
   };
 
   addToCartHandler = id => {

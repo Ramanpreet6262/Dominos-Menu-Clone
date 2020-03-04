@@ -81,36 +81,27 @@ let pizzas = [
     favorite: 'false',
     id: '0',
     crust: 'Cheese Burst',
-    crustIndex: 1,
     size: 'Medium',
-    sizeIndex: 1,
-    priceData: {
-      //Size Index : {}
-      0: {
-        // Crust Index : price
-        0: 215,
-        1: 290,
-        2: 245,
-        3: 215
+    availableCrusts: {
+      //Size : {}
+      Regular: {
+        // Crust : price
+        'New Hand Tossed': 215,
+        'Cheese Burst': 290,
+        'Fresh Pan Pizza': 245,
+        'Classic Hand Tossed': 215
       },
-      1: {
-        0: 395,
-        1: 494,
-        2: 435,
-        4: 445
+      Medium: {
+        'New Hand Tossed': 395,
+        'Cheese Burst': 494,
+        'Fresh Pan Pizza': 435,
+        'Wheat Thin Crust': 445
       },
-      2: {
-        0: 595
+      Large: {
+        'New Hand Tossed': 595
       }
     },
-    sizeData: ['Regular', 'Medium', 'Large'],
-    crustData: [
-      'New Hand Tossed',
-      'Cheese Burst',
-      'Fresh Pan Pizza',
-      'Classic Hand Tossed',
-      'Wheat Thin Crust'
-    ]
+    availableSizes: ['Regular', 'Medium', 'Large']
   },
   {
     title: 'Peppy Paneer',
@@ -119,38 +110,29 @@ let pizzas = [
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
     favorite: 'false',
-    id: '1',
+    id: '0',
     crust: 'Cheese Burst',
-    crustIndex: 1,
     size: 'Medium',
-    sizeIndex: 1,
-    priceData: {
-      //Size Index : {}
-      0: {
-        // Crust Index : price
-        0: 215,
-        1: 290,
-        2: 245,
-        3: 215
+    availableCrusts: {
+      //Size : {}
+      Regular: {
+        // Crust : price
+        'New Hand Tossed': 215,
+        'Cheese Burst': 290,
+        'Fresh Pan Pizza': 245,
+        'Classic Hand Tossed': 215
       },
-      1: {
-        0: 395,
-        1: 494,
-        2: 435,
-        4: 445
+      Medium: {
+        'New Hand Tossed': 395,
+        'Cheese Burst': 494,
+        'Fresh Pan Pizza': 435,
+        'Wheat Thin Crust': 445
       },
-      2: {
-        0: 595
+      Large: {
+        'New Hand Tossed': 595
       }
     },
-    sizeData: ['Regular', 'Medium', 'Large'],
-    crustData: [
-      'New Hand Tossed',
-      'Cheese Burst',
-      'Fresh Pan Pizza',
-      'Classic Hand Tossed',
-      'Wheat Thin Crust'
-    ]
+    availableSizes: ['Regular', 'Medium', 'Large']
   },
   {
     title: 'Peppy Paneer',
@@ -159,39 +141,138 @@ let pizzas = [
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
     favorite: 'false',
-    id: '2',
+    id: '0',
     crust: 'Cheese Burst',
-    crustIndex: 1,
     size: 'Medium',
-    sizeIndex: 1,
-    priceData: {
-      //Size Index : {}
-      0: {
-        // Crust Index : price
-        0: 215,
-        1: 290,
-        2: 245,
-        3: 215
+    availableCrusts: {
+      //Size : {}
+      Regular: {
+        // Crust : price
+        'New Hand Tossed': 215,
+        'Cheese Burst': 290,
+        'Fresh Pan Pizza': 245,
+        'Classic Hand Tossed': 215
       },
-      1: {
-        0: 395,
-        1: 494,
-        2: 435,
-        4: 445
+      Medium: {
+        'New Hand Tossed': 395,
+        'Cheese Burst': 494,
+        'Fresh Pan Pizza': 435,
+        'Wheat Thin Crust': 445
       },
-      2: {
-        0: 595
+      Large: {
+        'New Hand Tossed': 595
       }
     },
-    sizeData: ['Regular', 'Medium', 'Large'],
-    crustData: [
-      'New Hand Tossed',
-      'Cheese Burst',
-      'Fresh Pan Pizza',
-      'Classic Hand Tossed',
-      'Wheat Thin Crust'
-    ]
+    availableSizes: ['Regular', 'Medium', 'Large']
+  },
+  {
+    title: 'Peppy Paneer',
+    quantity: 0,
+    category: 'veg',
+    description:
+      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+    favorite: 'false',
+    id: '0',
+    crust: 'Cheese Burst',
+    size: 'Medium',
+    availableCrusts: {
+      //Size : {}
+      Regular: {
+        // Crust : price
+        'New Hand Tossed': 215,
+        'Cheese Burst': 290,
+        'Fresh Pan Pizza': 245,
+        'Classic Hand Tossed': 215
+      },
+      Medium: {
+        'New Hand Tossed': 395,
+        'Cheese Burst': 494,
+        'Fresh Pan Pizza': 435,
+        'Wheat Thin Crust': 445
+      },
+      Large: {
+        'New Hand Tossed': 595
+      }
+    },
+    availableSizes: ['Regular', 'Medium', 'Large']
+  },
+  {
+    title: 'Peppy Paneer',
+    quantity: 0,
+    category: 'veg',
+    description:
+      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+    favorite: 'false',
+    id: '0',
+    crust: 'Cheese Burst',
+    size: 'Medium',
+    availableCrusts: {
+      //Size : {}
+      Regular: {
+        // Crust : price
+        'New Hand Tossed': 215,
+        'Cheese Burst': 290,
+        'Fresh Pan Pizza': 245,
+        'Classic Hand Tossed': 215
+      },
+      Medium: {
+        'New Hand Tossed': 395,
+        'Cheese Burst': 494,
+        'Fresh Pan Pizza': 435,
+        'Wheat Thin Crust': 445
+      },
+      Large: {
+        'New Hand Tossed': 595
+      }
+    },
+    availableSizes: ['Regular', 'Medium', 'Large']
+  },
+  {
+    title: 'Peppy Paneer',
+    quantity: 0,
+    category: 'veg',
+    description:
+      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+    favorite: 'false',
+    id: '0',
+    crust: 'Cheese Burst',
+    size: 'Medium',
+    availableCrusts: {
+      //Size : {}
+      Regular: {
+        // Crust : price
+        'New Hand Tossed': 215,
+        'Cheese Burst': 290,
+        'Fresh Pan Pizza': 245,
+        'Classic Hand Tossed': 215
+      },
+      Medium: {
+        'New Hand Tossed': 395,
+        'Cheese Burst': 494,
+        'Fresh Pan Pizza': 435,
+        'Wheat Thin Crust': 445
+      },
+      Large: {
+        'New Hand Tossed': 595
+      }
+    },
+    availableSizes: ['Regular', 'Medium', 'Large']
   }
 ];
 
-export default pizzas;
+let allSizes = ['Regular', 'Medium', 'Large'];
+let allCrusts = [
+  'New Hand Tossed',
+  'Cheese Burst',
+  'Fresh Pan Pizza',
+  'Classic Hand Tossed',
+  'Wheat Thin Crust'
+];
+
+let data = {
+  pizzas: pizzas,
+  allSizes: allSizes,
+  allCrusts: allCrusts
+};
+
+export default data;
