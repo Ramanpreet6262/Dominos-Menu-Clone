@@ -5,6 +5,7 @@ import Loader from '../../Components/Loader/Loader';
 import QuantityButton from '../QuantityButton/QuantityButton';
 import data from '../../data/data';
 import SizeCrustSelect from '../../Components/SizeCrustSelectItems/SizeCrustSelect';
+import CustomiseModal from '../../Components/Modal/Modal';
 
 import peppyPaneer from '../../static/Images/Pizzas/peppy_paneer.jpg';
 import vegMarker from '../../static/assets/veg.svg';
@@ -19,7 +20,9 @@ class MenuPage extends Component {
     data: [],
     cart: [],
     allSizes: [],
-    allCrusts: []
+    allCrusts: [],
+    showModal: false,
+    modalId: '0'
   };
 
   componentDidMount() {
@@ -64,7 +67,11 @@ class MenuPage extends Component {
   };
 
   customiseHandler = id => {
-    console.log(id);
+    this.setState({ showModal: true, modalId: id });
+  };
+
+  handleClose = () => {
+    this.setState({ showModal: false });
   };
 
   handleChange = (event, id) => {
@@ -122,12 +129,12 @@ class MenuPage extends Component {
                         {pizza.description}
                       </p>
                     </div>
-
-                    <SizeCrustSelect
-                      pizza={pizza}
-                      onChange={this.handleChange}
-                    />
-
+                    <div className='size-crust-select-div'>
+                      <SizeCrustSelect
+                        pizza={pizza}
+                        onChange={this.handleChange}
+                      />
+                    </div>
                     {pizza.quantity > 0 ? (
                       <div className='card-qty-btn'>
                         <QuantityButton
@@ -238,6 +245,25 @@ class MenuPage extends Component {
               </React.Fragment>
             )}
           </div>
+          <CustomiseModal
+            handleClose={this.handleClose}
+            open={this.state.showModal}
+          >
+            <h1>{this.state.data[this.state.modalId].title}</h1>
+            <h6>{this.state.data[this.state.modalId].description}</h6>
+            <h5>
+              &#8377;{' '}
+              {
+                this.state.data[this.state.modalId].availableCrusts[
+                  this.state.data[this.state.modalId].size
+                ][this.state.data[this.state.modalId].crust]
+              }
+            </h5>
+            <SizeCrustSelect
+              pizza={this.state.data[this.state.modalId]}
+              onChange={this.handleChange}
+            />
+          </CustomiseModal>
         </React.Fragment>
       );
     }

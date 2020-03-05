@@ -4,10 +4,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
+import './SizeCrustSelect.css';
+
 const SizeCrustSelect = props => {
   return (
     <>
-      <div className='size-crust-select'>
+      <div className='size-select'>
         <FormControl>
           <InputLabel id='demo-simple-select-label'>Size</InputLabel>
           <Select
@@ -20,7 +22,7 @@ const SizeCrustSelect = props => {
             {props.pizza.availableSizes.map((size, index) => {
               return (
                 <MenuItem value={size} key={index}>
-                  {size} |{' '}
+                  {size} &#8377;{' '}
                   {props.pizza.availableCrusts[size][props.pizza.crust]}
                 </MenuItem>
               );
@@ -29,7 +31,7 @@ const SizeCrustSelect = props => {
         </FormControl>
       </div>
 
-      <div className='size-crust-select'>
+      <div className='crust-select'>
         <FormControl>
           <InputLabel id='demo-simple-select-label'>Crust</InputLabel>
           <Select
@@ -43,7 +45,7 @@ const SizeCrustSelect = props => {
               ([keyy, value], index) => {
                 return (
                   <MenuItem value={keyy} key={index}>
-                    {keyy} | {value}
+                    {keyy} &#8377; {value}
                   </MenuItem>
                 );
               }
