@@ -73,20 +73,20 @@ class MenuPage extends Component {
   };
 
   incQtyHandler = id => {
-    const updatedState = [...this.state.data];
-    updatedState[id].quantity += 1;
-    this.setState({ data: updatedState });
+    let { data } = this.state;
+    data[id].quantity += 1;
+    this.setState({ data });
   };
 
   decQtyHandler = id => {
-    const updatedState = [...this.state.data];
-    let newCart = [...this.state.cart];
-    if (updatedState[id].quantity === 1) {
-      const index = newCart.indexOf(id);
-      newCart.splice(index, 1);
+    let { data } = this.state;
+    let { cart } = this.state;
+    if (data[id].quantity === 1) {
+      const index = cart.indexOf(id);
+      cart.splice(index, 1);
     }
-    updatedState[id].quantity -= 1;
-    this.setState({ data: updatedState, cart: newCart });
+    data[id].quantity -= 1;
+    this.setState({ data, cart });
   };
 
   customiseHandler = id => {
