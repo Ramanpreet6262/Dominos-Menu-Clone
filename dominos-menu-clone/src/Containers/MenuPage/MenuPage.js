@@ -125,8 +125,7 @@ class MenuPage extends Component {
                       alt='veg/nonveg category'
                     />
                     <span className='pizza-price'>
-                      &#8377;{' '}
-                      {pizza.priceData[pizza.sizeIndex][pizza.crustIndex]}
+                      &#8377; {pizza.availableCrusts[pizza.size][pizza.crust]}
                     </span>
                     <button
                       className='customise-button'
@@ -246,9 +245,9 @@ class MenuPage extends Component {
                         <div className='cart-item-price'>
                           <span>
                             &#8377;{' '}
-                            {this.state.data[pizzaId].priceData[
-                              this.state.data[pizzaId].sizeIndex
-                            ][this.state.data[pizzaId].crustIndex] *
+                            {this.state.data[pizzaId].availableCrusts[
+                              this.state.data[pizzaId].size
+                            ][this.state.data[pizzaId].crust] *
                               this.state.data[pizzaId].quantity}
                           </span>
                         </div>
@@ -264,9 +263,9 @@ class MenuPage extends Component {
                       {this.state.cart.reduce(
                         (totalPrice, pizzaId) =>
                           totalPrice +
-                          this.state.data[pizzaId].priceData[
-                            this.state.data[pizzaId].sizeIndex
-                          ][this.state.data[pizzaId].crustIndex] *
+                          this.state.data[pizzaId].availableCrusts[
+                            this.state.data[pizzaId].size
+                          ][this.state.data[pizzaId].crust] *
                             this.state.data[pizzaId].quantity,
                         0
                       )}
