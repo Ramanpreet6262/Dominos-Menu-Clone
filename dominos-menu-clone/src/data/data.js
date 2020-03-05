@@ -1,77 +1,4 @@
 let pizzas = [
-  // {
-  //   category: 'veg',
-  //   crust: 'New Hand Tossed',
-  //   description:
-  //     'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
-  //   favorite: 'false',
-  //   id: '0',
-  //   price: '215',
-  //   quantity: 0,
-  //   size: 'Regular',
-  //   title: 'Peppy Paneer'
-  // },
-  // {
-  //   category: 'veg',
-  //   crust: 'New Hand Tossed',
-  //   description:
-  //     'Veg delight - onion, capsicum, grilled mushroom, corn & paneer',
-  //   favorite: 'false',
-  //   id: '1',
-  //   price: '450',
-  //   quantity: 0,
-  //   size: 'Medium',
-  //   title: 'Deluxe Veggie'
-  // },
-  // {
-  //   category: 'veg',
-  //   crust: 'New Hand Tossed',
-  //   description:
-  //     'Black olives, capsicum, onion, grilled mushroom, corn, tomato, jalapeno & extra cheese',
-  //   favorite: 'false',
-  //   id: '2',
-  //   price: '450',
-  //   quantity: 0,
-  //   size: 'Medium',
-  //   title: 'Veg Extravaganza'
-  // },
-  // {
-  //   category: 'nonveg',
-  //   crust: 'New Hand Tossed',
-  //   description:
-  //     'Double pepper barbecue chicken, golden corn and extra cheese, true delight',
-  //   favorite: 'false',
-  //   id: '3',
-  //   price: '450',
-  //   quantity: 0,
-  //   size: 'Medium',
-  //   title: 'Chicken Golden Delight'
-  // },
-  // {
-  //   category: 'nonveg',
-  //   crust: 'New Hand Tossed',
-  //   description:
-  //     'The wholesome flavour of tandoori masala with Chicken tikka, onion, red paprika & mint mayo',
-  //   favorite: 'false',
-  //   id: '4',
-  //   price: '570',
-  //   quantity: 0,
-  //   size: 'Medium',
-  //   title: 'Indi Chicken Tikka'
-  // },
-  // {
-  //   category: 'nonveg',
-  //   crust: 'New Hand Tossed',
-  //   description:
-  //     'A classic American taste! Relish the delectable flavor of Chicken Pepperoni, topped with extra cheese',
-  //   favorite: 'false',
-  //   id: '5',
-  //   price: '570',
-  //   quantity: 0,
-  //   size: 'Medium',
-  //   title: 'Chicken Pepperoni'
-  // },
-
   {
     title: 'Peppy Paneer',
     quantity: 0,
@@ -80,7 +7,7 @@ let pizzas = [
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
     favorite: false,
     id: '0',
-    crust: 'Cheese Burst',
+    crust: 'New Hand Tossed',
     size: 'Medium',
     availableCrusts: {
       //Size : {}
@@ -104,156 +31,156 @@ let pizzas = [
     availableSizes: ['Regular', 'Medium', 'Large']
   },
   {
-    title: 'Peppy Paneer',
+    title: 'Deluxe Veggie',
     quantity: 0,
     category: 'veg',
     description:
-      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+      'Veg delight - onion, capsicum, grilled mushroom, corn & paneer',
     favorite: false,
-    id: '0',
-    crust: 'Cheese Burst',
+    id: '1',
+    crust: 'New Hand Tossed',
     size: 'Medium',
     availableCrusts: {
       //Size : {}
       Regular: {
         // Crust : price
-        'New Hand Tossed': 215,
-        'Cheese Burst': 290,
-        'Fresh Pan Pizza': 245,
-        'Classic Hand Tossed': 215
+        'New Hand Tossed': 235,
+        'Cheese Burst': 310,
+        'Fresh Pan Pizza': 265,
+        'Classic Hand Tossed': 235
       },
       Medium: {
-        'New Hand Tossed': 395,
-        'Cheese Burst': 494,
-        'Fresh Pan Pizza': 435,
-        'Wheat Thin Crust': 445
+        'New Hand Tossed': 450,
+        'Cheese Burst': 549,
+        'Fresh Pan Pizza': 490,
+        'Wheat Thin Crust': 500
       },
       Large: {
-        'New Hand Tossed': 595
+        'New Hand Tossed': 695
       }
     },
     availableSizes: ['Regular', 'Medium', 'Large']
   },
   {
-    title: 'Peppy Paneer',
+    title: 'Veg Extravaganza',
     quantity: 0,
     category: 'veg',
     description:
-      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+      'Black olives, capsicum, onion, grilled mushroom, corn, tomato, jalapeno & extra cheese',
     favorite: false,
-    id: '0',
-    crust: 'Cheese Burst',
+    id: '2',
+    crust: 'New Hand Tossed',
     size: 'Medium',
     availableCrusts: {
       //Size : {}
       Regular: {
         // Crust : price
-        'New Hand Tossed': 215,
-        'Cheese Burst': 290,
-        'Fresh Pan Pizza': 245,
-        'Classic Hand Tossed': 215
+        'New Hand Tossed': 235,
+        'Cheese Burst': 310,
+        'Fresh Pan Pizza': 265,
+        'Classic Hand Tossed': 235
       },
       Medium: {
-        'New Hand Tossed': 395,
-        'Cheese Burst': 494,
-        'Fresh Pan Pizza': 435,
-        'Wheat Thin Crust': 445
+        'New Hand Tossed': 450,
+        'Cheese Burst': 549,
+        'Fresh Pan Pizza': 490,
+        'Wheat Thin Crust': 500
       },
       Large: {
-        'New Hand Tossed': 595
+        'New Hand Tossed': 695
       }
     },
     availableSizes: ['Regular', 'Medium', 'Large']
   },
   {
-    title: 'Peppy Paneer',
+    title: 'Chicken Golden Delight',
     quantity: 0,
-    category: 'veg',
+    category: 'nonveg',
     description:
-      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+      'Double pepper barbecue chicken, golden corn and extra cheese, true delight',
     favorite: false,
-    id: '0',
-    crust: 'Cheese Burst',
+    id: '3',
+    crust: 'New Hand Tossed',
     size: 'Medium',
     availableCrusts: {
       //Size : {}
       Regular: {
         // Crust : price
-        'New Hand Tossed': 215,
-        'Cheese Burst': 290,
-        'Fresh Pan Pizza': 245,
-        'Classic Hand Tossed': 215
+        'New Hand Tossed': 235,
+        'Cheese Burst': 310,
+        'Fresh Pan Pizza': 265,
+        'Classic Hand Tossed': 235
       },
       Medium: {
-        'New Hand Tossed': 395,
-        'Cheese Burst': 494,
-        'Fresh Pan Pizza': 435,
-        'Wheat Thin Crust': 445
+        'New Hand Tossed': 450,
+        'Cheese Burst': 549,
+        'Fresh Pan Pizza': 490,
+        'Wheat Thin Crust': 500
       },
       Large: {
-        'New Hand Tossed': 595
+        'New Hand Tossed': 695
       }
     },
     availableSizes: ['Regular', 'Medium', 'Large']
   },
   {
-    title: 'Peppy Paneer',
+    title: 'Indi Chicken Tikka',
     quantity: 0,
-    category: 'veg',
+    category: 'nonveg',
     description:
-      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+      'The wholesome flavour of tandoori masala with Chicken tikka, onion, red paprika & mint mayo',
     favorite: false,
-    id: '0',
-    crust: 'Cheese Burst',
+    id: '4',
+    crust: 'New Hand Tossed',
     size: 'Medium',
     availableCrusts: {
       //Size : {}
       Regular: {
         // Crust : price
-        'New Hand Tossed': 215,
-        'Cheese Burst': 290,
-        'Fresh Pan Pizza': 245,
-        'Classic Hand Tossed': 215
+        'New Hand Tossed': 305,
+        'Cheese Burst': 380,
+        'Fresh Pan Pizza': 335,
+        'Classic Hand Tossed': 305
       },
       Medium: {
-        'New Hand Tossed': 395,
-        'Cheese Burst': 494,
-        'Fresh Pan Pizza': 435,
-        'Wheat Thin Crust': 445
+        'New Hand Tossed': 570,
+        'Cheese Burst': 669,
+        'Fresh Pan Pizza': 610,
+        'Wheat Thin Crust': 620
       },
       Large: {
-        'New Hand Tossed': 595
+        'New Hand Tossed': 835
       }
     },
     availableSizes: ['Regular', 'Medium', 'Large']
   },
   {
-    title: 'Peppy Paneer',
+    title: 'Chicken Pepperoni',
     quantity: 0,
-    category: 'veg',
+    category: 'nonveg',
     description:
-      'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
+      'A classic American taste! Relish the delectable flavor of Chicken Pepperoni, topped with extra cheese',
     favorite: false,
-    id: '0',
-    crust: 'Cheese Burst',
+    id: '5',
+    crust: 'New Hand Tossed',
     size: 'Medium',
     availableCrusts: {
       //Size : {}
       Regular: {
         // Crust : price
-        'New Hand Tossed': 215,
-        'Cheese Burst': 290,
-        'Fresh Pan Pizza': 245,
-        'Classic Hand Tossed': 215
+        'New Hand Tossed': 305,
+        'Cheese Burst': 380,
+        'Fresh Pan Pizza': 335,
+        'Classic Hand Tossed': 305
       },
       Medium: {
-        'New Hand Tossed': 395,
-        'Cheese Burst': 494,
-        'Fresh Pan Pizza': 435,
-        'Wheat Thin Crust': 445
+        'New Hand Tossed': 570,
+        'Cheese Burst': 669,
+        'Fresh Pan Pizza': 610,
+        'Wheat Thin Crust': 620
       },
       Large: {
-        'New Hand Tossed': 595
+        'New Hand Tossed': 835
       }
     },
     availableSizes: ['Regular', 'Medium', 'Large']

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 import './MenuPage.css';
-
 import Loader from '../../Components/Loader/Loader';
 import QuantityButton from '../QuantityButton/QuantityButton';
 import data from '../../data/data';
@@ -19,28 +17,7 @@ import fillfav from '../../static/assets/fill_favorite.svg';
 import customiseArrow from '../../static/assets/customise_arrow.svg';
 import emptyCart from '../../static/assets/empty_cart.png';
 
-// const useStyles = makeStyles(theme => ({
-//   formControl: {
-//     margin: theme.spacing(1),
-//     minWidth: 120
-//   }
-// }));
-
 class MenuPage extends Component {
-  // classes = useStyles();
-
-  // const [age, setAge] = React.useState('');
-
-  // const inputLabel = React.useRef(null);
-  // const [labelWidth, setLabelWidth] = React.useState(0);
-  // React.useEffect(() => {
-  //   setLabelWidth(inputLabel.current.offsetWidth);
-  // }, []);
-
-  // const handleChange = event => {
-  //   setAge(event.target.value);
-  // };
-
   state = {
     data: [],
     cart: [],
@@ -93,12 +70,10 @@ class MenuPage extends Component {
     console.log(id);
   };
 
-  handleChange = (id, event) => {
-    const updatedState = [...this.state.data];
-    // console.log(updatedState[id].size);
-    updatedState[id].size = event.target.value;
-    console.log(updatedState[id].size);
-    // this.setState({value: event.target.value});
+  handleChange = (event, id) => {
+    let { data } = this.state;
+    data[id][event.target.name] = event.target.value;
+    this.setState({ data });
   };
 
   render() {
@@ -151,23 +126,55 @@ class MenuPage extends Component {
                       </p>
                     </div>
                     <div className='size-crust-select'>
-                      {/* <FormControl className={this.classes.formControl}> */}
                       <FormControl>
                         <InputLabel id='demo-simple-select-label'>
                           Size
                         </InputLabel>
                         <Select
+                          name='size'
                           labelId='demo-simple-select-label'
                           id='demo-simple-select'
                           value={pizza.size}
-                          onChange={() => this.handleChange(pizza.id)}
+                          onChange={event => this.handleChange(event, pizza.id)}
                         >
-                          <MenuItem value='Regular'>Regular</MenuItem>
-                          <MenuItem value='Medium'>Medium</MenuItem>
-                          <MenuItem value='Large'>Large</MenuItem>
+                          {pizza.availableSizes.map((size, index) => {
+                            return (
+                              <MenuItem value={size} key={index}>
+                                {size} |{' '}
+                                {pizza.availableCrusts[size][pizza.crust]}
+                              </MenuItem>
+                            );
+                          })}
                         </Select>
                       </FormControl>
                     </div>
+
+                    <div className='size-crust-select'>
+                      <FormControl>
+                        <InputLabel id='demo-simple-select-label'>
+                          Crust
+                        </InputLabel>
+
+                        <Select
+                          name='crust'
+                          labelId='demo-simple-select-label'
+                          id='demo-simple-select'
+                          value={pizza.crust}
+                          onChange={event => this.handleChange(event, pizza.id)}
+                        >
+                          {Object.entries(
+                            pizza.availableCrusts[pizza.size]
+                          ).map(([key, value], index) => {
+                            return (
+                              <MenuItem value={key} index={index}>
+                                {key} | {value}
+                              </MenuItem>
+                            );
+                          })}
+                        </Select>
+                      </FormControl>
+                    </div>
+
                     {pizza.quantity > 0 ? (
                       <div className='card-qty-btn'>
                         <QuantityButton
