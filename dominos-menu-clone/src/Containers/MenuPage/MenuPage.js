@@ -63,13 +63,13 @@ class MenuPage extends Component {
   };
 
   addToCartHandler = id => {
-    const updatedState = [...this.state.data];
-    updatedState[id].quantity += 1;
-    let newCart = [...this.state.cart];
+    let { data } = this.state;
+    data[id].quantity += 1;
+    let { cart } = this.state;
     if (!this.state.cart.includes(id)) {
-      newCart.unshift(id);
+      cart.unshift(id);
     }
-    this.setState({ data: updatedState, cart: newCart });
+    this.setState({ data, cart });
   };
 
   incQtyHandler = id => {
