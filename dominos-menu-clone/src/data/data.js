@@ -78,7 +78,7 @@ let pizzas = [
     category: 'veg',
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
-    favorite: 'false',
+    favorite: false,
     id: '0',
     crust: 'Cheese Burst',
     size: 'Medium',
@@ -109,7 +109,7 @@ let pizzas = [
     category: 'veg',
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
-    favorite: 'false',
+    favorite: false,
     id: '0',
     crust: 'Cheese Burst',
     size: 'Medium',
@@ -140,7 +140,7 @@ let pizzas = [
     category: 'veg',
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
-    favorite: 'false',
+    favorite: false,
     id: '0',
     crust: 'Cheese Burst',
     size: 'Medium',
@@ -171,7 +171,7 @@ let pizzas = [
     category: 'veg',
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
-    favorite: 'false',
+    favorite: false,
     id: '0',
     crust: 'Cheese Burst',
     size: 'Medium',
@@ -202,7 +202,7 @@ let pizzas = [
     category: 'veg',
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
-    favorite: 'false',
+    favorite: false,
     id: '0',
     crust: 'Cheese Burst',
     size: 'Medium',
@@ -233,7 +233,7 @@ let pizzas = [
     category: 'veg',
     description:
       'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika',
-    favorite: 'false',
+    favorite: false,
     id: '0',
     crust: 'Cheese Burst',
     size: 'Medium',

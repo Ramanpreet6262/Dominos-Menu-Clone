@@ -58,9 +58,7 @@ class MenuPage extends Component {
 
   favHandler = id => {
     let { data } = this.state;
-    data[id].favorite === 'true'
-      ? (data[id].favorite = 'false')
-      : (data[id].favorite = 'true');
+    data[id].favorite = !data[id].favorite;
     this.setState({ data });
   };
 
@@ -139,7 +137,7 @@ class MenuPage extends Component {
                       />
                     </button>
                     <img
-                      src={pizza.favorite === 'true' ? fillfav : fav}
+                      src={pizza.favorite ? fillfav : fav}
                       className='fav-marker'
                       alt='favorite'
                       onClick={() => this.favHandler(pizza.id)}
