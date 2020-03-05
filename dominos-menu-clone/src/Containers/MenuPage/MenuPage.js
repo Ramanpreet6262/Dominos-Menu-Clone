@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 
 import './MenuPage.css';
 import Loader from '../../Components/Loader/Loader';
 import QuantityButton from '../QuantityButton/QuantityButton';
 import data from '../../data/data';
+import SizeCrustSelect from '../../Components/SizeCrustSelectItems/SizeCrustSelect';
 
 import peppyPaneer from '../../static/Images/Pizzas/peppy_paneer.jpg';
 import vegMarker from '../../static/assets/veg.svg';
@@ -125,55 +122,11 @@ class MenuPage extends Component {
                         {pizza.description}
                       </p>
                     </div>
-                    <div className='size-crust-select'>
-                      <FormControl>
-                        <InputLabel id='demo-simple-select-label'>
-                          Size
-                        </InputLabel>
-                        <Select
-                          name='size'
-                          labelId='demo-simple-select-label'
-                          id='demo-simple-select'
-                          value={pizza.size}
-                          onChange={event => this.handleChange(event, pizza.id)}
-                        >
-                          {pizza.availableSizes.map((size, index) => {
-                            return (
-                              <MenuItem value={size} key={index}>
-                                {size} |{' '}
-                                {pizza.availableCrusts[size][pizza.crust]}
-                              </MenuItem>
-                            );
-                          })}
-                        </Select>
-                      </FormControl>
-                    </div>
 
-                    <div className='size-crust-select'>
-                      <FormControl>
-                        <InputLabel id='demo-simple-select-label'>
-                          Crust
-                        </InputLabel>
-
-                        <Select
-                          name='crust'
-                          labelId='demo-simple-select-label'
-                          id='demo-simple-select'
-                          value={pizza.crust}
-                          onChange={event => this.handleChange(event, pizza.id)}
-                        >
-                          {Object.entries(
-                            pizza.availableCrusts[pizza.size]
-                          ).map(([key, value], index) => {
-                            return (
-                              <MenuItem value={key} index={index}>
-                                {key} | {value}
-                              </MenuItem>
-                            );
-                          })}
-                        </Select>
-                      </FormControl>
-                    </div>
+                    <SizeCrustSelect
+                      pizza={pizza}
+                      onChange={this.handleChange}
+                    />
 
                     {pizza.quantity > 0 ? (
                       <div className='card-qty-btn'>
@@ -292,10 +245,3 @@ class MenuPage extends Component {
 }
 
 export default MenuPage;
-
-/* 
-crust: 'New Hand Tossed',
-size: 'Regular'
-    
-Then customise de click te side modal and update value
-*/
