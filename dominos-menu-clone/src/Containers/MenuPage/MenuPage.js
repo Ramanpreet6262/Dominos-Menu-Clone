@@ -22,14 +22,24 @@ class MenuPage extends Component {
     allSizes: [],
     allCrusts: [],
     showModal: false,
-    modalId: '0'
+    modalId: '0',
+    allVegToppings: [],
+    allNonVegToppings: [],
+    cheesePricing: {},
+    vegToppingsPricing: {},
+    nonVegToppingsPricing: {}
   };
 
   componentDidMount() {
     this.setState({
       data: data.pizzas,
       allSizes: data.allSizes,
-      allCrusts: data.allCrusts
+      allCrusts: data.allCrusts,
+      allVegToppings: data.allVegToppings,
+      allNonVegToppings: data.allNonVegToppings,
+      cheesePricing: data.cheesePricing,
+      vegToppingsPricing: data.vegToppingsPricing,
+      nonVegToppingsPricing: data.nonVegToppingsPricing
     });
   }
 
@@ -84,6 +94,34 @@ class MenuPage extends Component {
     if (this.state.data.length === 0) {
       return <Loader />;
     } else {
+      let basicPrice = this.state.data[this.state.modalId].availableCrusts[
+        this.state.data[this.state.modalId].size
+      ][this.state.data[this.state.modalId].crust];
+
+      if (this.state.data[this.state.modalId].extraCheese) {
+        basicPrice += this.state.cheesePricing[
+          this.state.data[this.state.modalId].size
+        ];
+      }
+
+      if (this.state.data[this.state.modalId].vegToppings.length !== 0) {
+        basicPrice +=
+          this.state.data[this.state.modalId].vegToppings.length *
+          this.state.vegToppingsPricing[
+            this.state.data[this.state.modalId].size
+          ];
+      }
+
+      if (this.state.data[this.state.modalId].nonVegToppings.length !== 0) {
+        basicPrice +=
+          this.state.data[this.state.modalId].nonVegToppings.length *
+          this.state.nonVegToppingsPricing[
+            this.state.data[this.state.modalId].size
+          ];
+      }
+
+      console.log(basicPrice);
+
       return (
         <React.Fragment>
           <div className='menuPage flex-container'>
@@ -253,11 +291,17 @@ class MenuPage extends Component {
             <h6>{this.state.data[this.state.modalId].description}</h6>
             <h5>
               &#8377;{' '}
-              {
-                this.state.data[this.state.modalId].availableCrusts[
-                  this.state.data[this.state.modalId].size
-                ][this.state.data[this.state.modalId].crust]
-              }
+              {/* {this.state.data[this.state.modalId].extraCheese
+                ? this.state.data[this.state.modalId].availableCrusts[
+                    this.state.data[this.state.modalId].size
+                  ][this.state.data[this.state.modalId].crust] +
+                  this.state.data[this.state.modalId].cheesePricing[
+                    this.state.data[this.state.modalId].size
+                  ]
+                : this.state.data[this.state.modalId].availableCrusts[
+                    this.state.data[this.state.modalId].size
+                  ][this.state.data[this.state.modalId].crust]} */}
+              {basicPrice}
             </h5>
             <SizeCrustSelect
               pizza={this.state.data[this.state.modalId]}

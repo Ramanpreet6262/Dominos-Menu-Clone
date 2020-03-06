@@ -28,7 +28,17 @@ let pizzas = [
         'New Hand Tossed': 595
       }
     },
-    availableSizes: ['Regular', 'Medium', 'Large']
+    availableSizes: ['Regular', 'Medium', 'Large'],
+    extraCheese: false,
+    // cheesePricing: {
+    //   Regular: 50,
+    //   Medium: 75,
+    //   Large: 95
+    // },
+    // toppings: [1, 2]
+    vegToppings: [],
+    nonVegToppings: [],
+    customised: false
   },
   {
     title: 'Deluxe Veggie',
@@ -195,11 +205,47 @@ let allCrusts = [
   'Classic Hand Tossed',
   'Wheat Thin Crust'
 ];
+let cheesePricing = {
+  Regular: 50,
+  Medium: 75,
+  Large: 95
+};
+let allVegToppings = [
+  'Onion',
+  'Fresh Tomato',
+  'Grilled Mushroom',
+  'Golden Corn',
+  'Crisp Capsicum',
+  'Black Olive'
+];
+let allNonVegToppings = [
+  'Pepper Barbecue Chicken',
+  'Peri-Peri Chicken',
+  'Grilled Chicken Rasher',
+  'Chicken Sausage',
+  'Chicken Tikka',
+  'Chicken Pepperoni'
+];
+let vegToppingsPricing = {
+  Regular: 35,
+  Medium: 60,
+  Large: 80
+};
+let nonVegToppingsPricing = {
+  Regular: 50,
+  Medium: 75,
+  Large: 95
+};
 
 let data = {
   pizzas: pizzas,
   allSizes: allSizes,
-  allCrusts: allCrusts
+  allCrusts: allCrusts,
+  allVegToppings: allVegToppings,
+  allNonVegToppings: allNonVegToppings,
+  cheesePricing: cheesePricing,
+  vegToppingsPricing: vegToppingsPricing,
+  nonVegToppingsPricing: nonVegToppingsPricing
 };
 
 export default data;
