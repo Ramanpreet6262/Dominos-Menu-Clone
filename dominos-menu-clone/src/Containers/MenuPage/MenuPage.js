@@ -7,6 +7,12 @@ import data from '../../data/data';
 import SizeCrustSelect from '../../Components/SizeCrustSelectItems/SizeCrustSelect';
 import CustomiseModal from '../../Components/Modal/Modal';
 
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+
 import peppyPaneer from '../../static/Images/Pizzas/peppy_paneer.jpg';
 import vegMarker from '../../static/assets/veg.svg';
 import nonvegMarker from '../../static/assets/non_veg.svg';
@@ -98,7 +104,7 @@ class MenuPage extends Component {
         this.state.data[this.state.modalId].size
       ][this.state.data[this.state.modalId].crust];
 
-      if (this.state.data[this.state.modalId].extraCheese) {
+      if (this.state.data[this.state.modalId].extraCheese === 'true') {
         basicPrice += this.state.cheesePricing[
           this.state.data[this.state.modalId].size
         ];
@@ -119,8 +125,6 @@ class MenuPage extends Component {
             this.state.data[this.state.modalId].size
           ];
       }
-
-      console.log(basicPrice);
 
       return (
         <React.Fragment>
@@ -289,24 +293,42 @@ class MenuPage extends Component {
           >
             <h1>{this.state.data[this.state.modalId].title}</h1>
             <h6>{this.state.data[this.state.modalId].description}</h6>
-            <h5>
-              &#8377;{' '}
-              {/* {this.state.data[this.state.modalId].extraCheese
-                ? this.state.data[this.state.modalId].availableCrusts[
-                    this.state.data[this.state.modalId].size
-                  ][this.state.data[this.state.modalId].crust] +
-                  this.state.data[this.state.modalId].cheesePricing[
-                    this.state.data[this.state.modalId].size
-                  ]
-                : this.state.data[this.state.modalId].availableCrusts[
-                    this.state.data[this.state.modalId].size
-                  ][this.state.data[this.state.modalId].crust]} */}
-              {basicPrice}
+            <h5>&#8377; {basicPrice}</h5>
+            <h5 style={{ marginTop: '35px', fontWeight: 'bold' }}>
+              Select Size and Crust
             </h5>
             <SizeCrustSelect
               pizza={this.state.data[this.state.modalId]}
               onChange={this.handleChange}
             />
+            <h5 style={{ marginTop: '80px', fontWeight: 'bold' }}>
+              Extra Cheese
+            </h5>
+            <div>
+              <FormControl component='fieldset'>
+                <FormLabel component='legend'>Extra Cheese</FormLabel>
+                <RadioGroup
+                  aria-label='Extra Cheese'
+                  name='extraCheese'
+                  value={this.state.data[this.state.modalId].extraCheese}
+                  onChange={event =>
+                    this.handleChange(event, this.state.modalId)
+                  }
+                  row
+                >
+                  <FormControlLabel
+                    value='true'
+                    control={<Radio />}
+                    label='Yes'
+                  />
+                  <FormControlLabel
+                    value='false'
+                    control={<Radio />}
+                    label='No'
+                  />
+                </RadioGroup>
+              </FormControl>
+            </div>
           </CustomiseModal>
         </React.Fragment>
       );

@@ -29,13 +29,7 @@ let pizzas = [
       }
     },
     availableSizes: ['Regular', 'Medium', 'Large'],
-    extraCheese: false,
-    // cheesePricing: {
-    //   Regular: 50,
-    //   Medium: 75,
-    //   Large: 95
-    // },
-    // toppings: [1, 2]
+    extraCheese: 'false',
     vegToppings: [],
     nonVegToppings: [],
     customised: false
@@ -69,7 +63,11 @@ let pizzas = [
         'New Hand Tossed': 695
       }
     },
-    availableSizes: ['Regular', 'Medium', 'Large']
+    availableSizes: ['Regular', 'Medium', 'Large'],
+    extraCheese: 'false',
+    vegToppings: [],
+    nonVegToppings: [],
+    customised: false
   },
   {
     title: 'Veg Extravaganza',
@@ -100,7 +98,11 @@ let pizzas = [
         'New Hand Tossed': 695
       }
     },
-    availableSizes: ['Regular', 'Medium', 'Large']
+    availableSizes: ['Regular', 'Medium', 'Large'],
+    extraCheese: 'false',
+    vegToppings: [],
+    nonVegToppings: [],
+    customised: false
   },
   {
     title: 'Chicken Golden Delight',
@@ -131,7 +133,11 @@ let pizzas = [
         'New Hand Tossed': 695
       }
     },
-    availableSizes: ['Regular', 'Medium', 'Large']
+    availableSizes: ['Regular', 'Medium', 'Large'],
+    extraCheese: 'false',
+    vegToppings: [],
+    nonVegToppings: [],
+    customised: false
   },
   {
     title: 'Indi Chicken Tikka',
@@ -162,7 +168,11 @@ let pizzas = [
         'New Hand Tossed': 835
       }
     },
-    availableSizes: ['Regular', 'Medium', 'Large']
+    availableSizes: ['Regular', 'Medium', 'Large'],
+    extraCheese: 'false',
+    vegToppings: [],
+    nonVegToppings: [],
+    customised: false
   },
   {
     title: 'Chicken Pepperoni',
@@ -193,7 +203,11 @@ let pizzas = [
         'New Hand Tossed': 835
       }
     },
-    availableSizes: ['Regular', 'Medium', 'Large']
+    availableSizes: ['Regular', 'Medium', 'Large'],
+    extraCheese: 'false',
+    vegToppings: [],
+    nonVegToppings: [],
+    customised: false
   }
 ];
 
